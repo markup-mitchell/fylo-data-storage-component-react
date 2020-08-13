@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import Input from '../components/Input';
+import StorageLeft from './StorageLeft';
 
 const StyledWrapper = styled.div`
   display: flex;
@@ -76,7 +76,7 @@ const StorageBar = () => {
         <p>0GB</p>
         <p>1000GB</p>
       </div>
-      <Input inputHandler={(e) => setStorage(e.target.value || '185')} />
+      <StorageLeft storageLeft={storage} />
     </StyledWrapper>
   );
 };
