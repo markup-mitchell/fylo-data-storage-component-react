@@ -18,7 +18,7 @@ const Wrapper = styled.div`
   background-size: cover;
   @media (min-width: 927px) {
     background-image: url(${BackgroundPatternDesktop});
-    background-size: 100% 50%;
+    background-size: 100% 52%;
     background-position: 0 100%;
   }
   .standard-padding {
