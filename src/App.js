@@ -18,27 +18,40 @@ const Wrapper = styled.div`
   background-size: cover;
   @media (min-width: 927px) {
     background-image: url(${BackgroundPatternDesktop});
-    background-size: contain;
-    background-position: bottom;
+    background-size: 100% 50%;
+    background-position: 0 100%;
+  }
+  .standard-padding {
+    padding: 1.5rem;
+    width: 100%;
   }
 `;
 
 const Row = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: flex-end;
+  flex-direction: column;
   > * + * {
-    margin-left: 2rem;
+    margin: 1rem 0 0 0;
+  }
+  @media (min-width: 1024px) {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    > * + * {
+      margin: 0 0 0 2rem;
+    }
   }
 `;
 
 function App() {
   return (
     <Wrapper>
-      <Row>
-        <Actions></Actions>
-        <StorageBar></StorageBar>
-      </Row>
+      <div className="standard-padding">
+        <Row>
+          <Actions></Actions>
+          <StorageBar></StorageBar>
+        </Row>
+      </div>
     </Wrapper>
   );
 }

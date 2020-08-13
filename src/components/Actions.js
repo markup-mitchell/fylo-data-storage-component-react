@@ -9,8 +9,8 @@ import logo from '../images/logo.svg';
 import ActionButton from '../components/ActionButton';
 
 const Wrapper = styled.div`
-  padding: 40px 134px 40px 40px;
-  border-radius: 0 100px 0 0;
+  padding: 40px;
+  border-radius: 10px 100px 10px 10px;
   background-color: #1e2d69;
 
   #logo {
@@ -33,6 +33,9 @@ const Wrapper = styled.div`
     border: none;
     font: inherit;
     cursor: pointer;
+  }
+  @media (min-width: 1024px) {
+    padding-right: 134px;
   }
 `;
 
