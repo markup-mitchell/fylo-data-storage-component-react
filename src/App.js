@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import BackgroundPatternMobile from './images/bg-mobile.png';
 import BackgroundPatternDesktop from './images/bg-desktop.png';
 import Actions from './components/Actions';
+import StorageBar from './components/StorageBar';
 
 const Wrapper = styled.div`
   width: 100vw;
@@ -22,10 +23,22 @@ const Wrapper = styled.div`
   }
 `;
 
+const Row = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  > * + * {
+    margin-left: 2rem;
+  }
+`;
+
 function App() {
   return (
     <Wrapper>
-      <Actions></Actions>
+      <Row>
+        <Actions></Actions>
+        <StorageBar></StorageBar>
+      </Row>
     </Wrapper>
   );
 }
