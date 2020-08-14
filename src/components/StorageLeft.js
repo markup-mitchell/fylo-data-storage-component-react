@@ -19,6 +19,7 @@ const StyledDiv = styled.div`
     white-space: nowrap;
     opacity: 0.8;
     margin: 0.5rem 0 0 0.5rem;
+    font-size: 12px;
   }
   @media (min-width: 1024px) {
     position: absolute;

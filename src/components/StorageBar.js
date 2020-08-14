@@ -96,7 +96,7 @@ const Input = styled.input`
 `;
 
 const StorageBar = () => {
-  const [storage, setStorage] = useState('185');
+  const [storage, setStorage] = useState('815');
   return (
     <StyledWrapper>
       <p>
