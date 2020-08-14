@@ -24,6 +24,16 @@ const Wrapper = styled.div`
     padding: 1.5rem;
     width: 100%;
   }
+  .attribution {
+    font-size: 11px;
+    text-align: center;
+    position: absolute;
+    bottom: 20px;
+    color: white;
+  }
+  .attribution a {
+    color: #ffa197;
+  }
 `;
 
 const Row = styled.div`
@@ -51,6 +61,13 @@ function App() {
           <Actions></Actions>
           <StorageBar></StorageBar>
         </Row>
+      </div>
+      <div class="attribution">
+        Challenge by{' '}
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
+          Frontend Mentor
+        </a>
+        . Coded by <a href="https://www.markupmitchell.com">Mark Mitchell</a>.
       </div>
     </Wrapper>
   );

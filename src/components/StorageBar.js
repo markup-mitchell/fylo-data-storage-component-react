@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import StorageLeft from './StorageLeft';
 
 const StyledWrapper = styled.div`
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,9 +11,13 @@ const StyledWrapper = styled.div`
   border-radius: 10px;
   background-color: #1e2d69;
   padding: 0 2rem;
+  padding-top: 2rem;
+  position: relative; /* allow children to be absolutely positioned */
   @media (min-width: 1024px) {
     width: 100%;
-    max-width: 476px;
+    max-width: 540px;
+    padding: 40px;
+    align-items: flex-start;
   }
 
   * {
@@ -22,7 +27,7 @@ const StyledWrapper = styled.div`
   p {
     font-size: 14px;
     color: white;
-    text-align: center;
+    margin: 0 0 16px 0;
   }
 
   .justify-between {
@@ -32,10 +37,12 @@ const StyledWrapper = styled.div`
     justify-content: space-between;
     font-weight: bold;
     font-size: 12px;
+    margin-top: 10px;
   }
 `;
 
 const OuterBar = styled.div`
+  box-sizing: border-box;
   width: 100%;
   display: flex;
   align-items: center;
@@ -65,6 +72,7 @@ const Input = styled.input`
   display: inline;
   color: white;
   font-weight: bold;
+  width: 25px;
   background-color: transparent;
   border: none;
   &::placeholder {
@@ -81,7 +89,13 @@ const StorageBar = () => {
   return (
     <StyledWrapper>
       <p>
-        You've used <Input type="text" placeholder={storage} />
+        You've used{' '}
+        <Input
+          type="text"
+          placeholder={storage}
+          maxLength="3"
+          onChange={(e) => setStorage(e.target.value)}
+        />
         <b>GB</b> of your storage
       </p>
 
