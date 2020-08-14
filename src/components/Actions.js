@@ -45,9 +45,9 @@ const Actions = () => {
       <div className="flex column">
         <img id="logo" src={logo} alt="Fylo" />
         <div className="flex icon-row">
-          <ActionButton icon={document} />
-          <ActionButton icon={folder} />
-          <ActionButton icon={upload} />
+          <ActionButton name="documents" icon={document} />
+          <ActionButton name="folder" icon={folder} />
+          <ActionButton name="upload" icon={upload} />
         </div>
       </div>
     </Wrapper>

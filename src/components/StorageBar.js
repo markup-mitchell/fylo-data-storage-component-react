@@ -39,6 +39,17 @@ const StyledWrapper = styled.div`
     font-size: 12px;
     margin-top: 10px;
   }
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
 `;
 
 const OuterBar = styled.div`
@@ -91,11 +102,15 @@ const StorageBar = () => {
       <p>
         You've used{' '}
         <Input
+          id="storage"
           type="text"
           placeholder={storage}
           maxLength="3"
           onChange={(e) => setStorage(e.target.value)}
         />
+        <label for="storage" className="sr-only">
+          storage
+        </label>
         <b>GB</b> of your storage
       </p>
 

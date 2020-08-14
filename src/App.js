@@ -34,6 +34,17 @@ const Wrapper = styled.div`
   .attribution a {
     color: #ffa197;
   }
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
 `;
 
 const Row = styled.div`
@@ -56,18 +67,27 @@ const Row = styled.div`
 function App() {
   return (
     <Wrapper>
+      <h1 className="sr-only">Fylo Storage Demo</h1>
       <div className="standard-padding">
         <Row>
           <Actions></Actions>
           <StorageBar></StorageBar>
         </Row>
       </div>
-      <div class="attribution">
+      <div className="attribution">
         Challenge by{' '}
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
+        <a
+          href="https://www.frontendmentor.io?ref=challenge"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Frontend Mentor
         </a>
-        . Coded by <a href="https://www.markupmitchell.com">Mark Mitchell</a>.
+        . Coded by{' '}
+        <a href="https://www.markupmitchell.com" rel="noopener noreferrer">
+          Mark Mitchell
+        </a>
+        .
       </div>
     </Wrapper>
   );

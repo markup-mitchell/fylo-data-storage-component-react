@@ -17,7 +17,7 @@ const StyledDiv = styled.div`
     color: #0c122c;
     font-weight: bold;
     white-space: nowrap;
-    opacity: 0.5;
+    opacity: 0.8;
     margin: 0.5rem 0 0 0.5rem;
   }
   @media (min-width: 1024px) {

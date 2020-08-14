@@ -11,8 +11,8 @@ const StyledButton = styled.button`
   height: 48px;
 `;
 
-const ActionButton = ({ icon }) => {
-  return <StyledButton icon={icon}></StyledButton>;
+const ActionButton = ({ icon, name }) => {
+  return <StyledButton aria-label={name} icon={icon}></StyledButton>;
 };
 
 export default ActionButton;
