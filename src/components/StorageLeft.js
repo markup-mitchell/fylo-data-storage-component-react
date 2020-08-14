@@ -17,14 +17,14 @@ const StyledDiv = styled.div`
     font-weight: bold;
     white-space: nowrap;
     opacity: 0.5;
-    margin-left: 0.5rem;
+    margin: 0.5rem 0 0 0.5rem;
   }
 `;
 
-const StorageLeft = ({ storageLeft }) => {
+const StorageLeft = ({ storage }) => {
   return (
     <StyledDiv>
-      {storageLeft}
+      {1000 - storage}
       <p className="left">GB LEFT</p>
     </StyledDiv>
   );

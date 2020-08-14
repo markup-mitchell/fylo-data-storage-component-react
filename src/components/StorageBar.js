@@ -60,23 +60,41 @@ const Circle = styled.div`
   border-radius: 100%;
   background-color: white;
 `;
+
+const Input = styled.input`
+  display: inline;
+  color: white;
+  font-weight: bold;
+  background-color: transparent;
+  border: none;
+  &::placeholder {
+    color: white;
+    font-weight: bold;
+  }
+  &:focus {
+    outline: none; /* ad hoc demo control rather than a real interface, so no a11y concerns */
+  }
+`;
+
 const StorageBar = () => {
   const [storage, setStorage] = useState('185');
   return (
     <StyledWrapper>
       <p>
-        You've used <b>{storage}GB</b> of your storage
+        You've used <Input type="text" placeholder={storage} />
+        <b>GB</b> of your storage
       </p>
+
       <OuterBar>
         <InnerBar gb={storage}>
           <Circle />
         </InnerBar>
       </OuterBar>
       <div className="justify-between">
-        <p>0GB</p>
-        <p>1000GB</p>
+        <p>0 GB</p>
+        <p>1000 GB</p>
       </div>
-      <StorageLeft storageLeft={storage} />
+      <StorageLeft storage={storage} />
     </StyledWrapper>
   );
 };
